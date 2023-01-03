@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <div className="mt-56 flex flex-col items-center text-gray-400">
       <div className="head-sub">

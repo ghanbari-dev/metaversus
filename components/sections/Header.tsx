@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <div>
       <div className="mt-9 mx-auto flex justify-between">

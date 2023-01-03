@@ -1,11 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import IconWrapper from "./IconWrapper";
-import Title from "./Title";
+import Title from "../items/Title";
+import WhatsNewCard from "../items/WhatsNewCard";
 
-type Props = {};
-
-const WhatsNew = (props: Props) => {
+const WhatsNew = () => {
   const data = [
     {
       src: "/vrpano.svg",
@@ -28,15 +26,7 @@ const WhatsNew = (props: Props) => {
         <Title subhead="Whats New?" title="What's new about Metaversus?" />
         <div className="mt-12 flex gap-12">
           {data.map((item, index) => (
-            <div key={index}>
-              <IconWrapper>
-                <Image src="/vrpano.svg" alt="vrpano" width={24} height={24} />
-              </IconWrapper>
-              <div className="mt-6 text-white text-2xl leading-[30px] font-bold">
-                {item.title}
-              </div>
-              <p className="mt-4 leading-7 text-gray-400">{item.description}</p>
-            </div>
+            <WhatsNewCard key={index} {...item} />
           ))}
         </div>
       </div>

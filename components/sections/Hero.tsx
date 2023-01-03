@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <div className="mt-44">
       <div className="text-white text-[144px] leading-[110%] font-bold tracking-tight uppercase flex items-center flex-col">

@@ -1,11 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import IconWrapper from "./IconWrapper";
-import Title from "./Title";
+import IconWrapper from "../items/IconWrapper";
+import Title from "../items/Title";
 
-type Props = {};
-
-const GetStarted = (props: Props) => {
+const GetStarted = () => {
   const data = [
     "Find a world that suits you and you want to enter",
     "Enter the world by reading basmalah to be safe",
@@ -28,14 +26,14 @@ const GetStarted = (props: Props) => {
             subhead="How Metaverus Works"
             title="Get started with just a few clicks"
           />
-          {data.map((d, index) => (
+          {data.map((item, index) => (
             <div key={index} className="mt-6 flex gap-7">
               <IconWrapper>
                 <p className="text-white text-xl font-bold">
                   {"0" + (index + 1)}
                 </p>
               </IconWrapper>
-              <p className="text-lg leading-[32px] text-gray-400">{d}</p>
+              <p className="text-lg leading-[32px] text-gray-400">{item}</p>
             </div>
           ))}
         </div>

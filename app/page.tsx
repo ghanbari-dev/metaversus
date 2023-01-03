@@ -1,11 +1,14 @@
 import React from "react";
-import About from "../components/About";
-import Explore from "../components/Explore";
-import GetStarted from "../components/GetStarted";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import WhatsNew from "../components/WhatsNew";
-import Worlds from "../components/Worlds";
+import {
+  About,
+  Explore,
+  GetStarted,
+  Header,
+  Hero,
+  Insight,
+  WhatsNew,
+  Worlds,
+} from "../components/sections";
 
 type Props = {};
 
@@ -25,6 +28,8 @@ const page = (props: Props) => {
       <WhatsNew />
 
       <Explore />
+
+      <Insight />
     </div>
   );
 };

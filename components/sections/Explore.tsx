@@ -1,16 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import People from "./People";
-import Title from "./Title";
+import People from "../items/People";
+import Title from "../items/Title";
 
-import map from "../public/map.png";
-type Props = {};
+import map from "../../public/map.png";
 
-const Explore = (props: Props) => {
+const Explore = () => {
   const data = [
-    { srs: "/people-01.png", alt: "people-01", sx: "top-[10%] left-[10%]" },
-    { srs: "/people-02.png", alt: "people-02", sx: "bottom-[20%] right-[10%]" },
-    { srs: "/people-03.png", alt: "people-03", sx: "top-[30%] left-[45%]" },
+    { src: "/people-01.png", alt: "people-01", sx: "top-[10%] left-[10%]" },
+    { src: "/people-02.png", alt: "people-02", sx: "bottom-[20%] right-[10%]" },
+    { src: "/people-03.png", alt: "people-03", sx: "top-[30%] left-[45%]" },
   ];
   return (
     <div className="mt-[200px] flex flex-col items-center">
@@ -21,8 +20,8 @@ const Explore = (props: Props) => {
       />
       <div className="mt-16 relative w-full">
         <Image src={map} alt="map" className="object-contain" />
-        {data.map((item,index) => (
-          <People key={index} src={item.srs} alt={item.alt} sx={item.sx} />
+        {data.map((item, index) => (
+          <People key={index} {...item} />
         ))}
 
         {/* TODO: add cards to map */}
