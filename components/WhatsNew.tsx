@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import IconWrapper from "./IconWrapper";
+import Title from "./Title";
 
 type Props = {};
 
@@ -24,10 +25,7 @@ const WhatsNew = (props: Props) => {
   return (
     <div className="mt-[200px] flex">
       <div className="flex-[4]">
-        <div className="head-sub">Whats New?</div>
-        <h2 className="text-[64px] leading-[77px] font-bold text-white mt-2">
-          What's new about Metaversus?
-        </h2>
+        <Title subhead="Whats New?" title="What's new about Metaversus?" />
         <div className="mt-12 flex gap-12">
           {data.map((item, index) => (
             <div key={index}>
@@ -43,13 +41,13 @@ const WhatsNew = (props: Props) => {
         </div>
       </div>
       <div className="relative flex-[3]">
-          <Image
-            src="/whats-new.png"
-            alt="whats new"
-            fill
-            className="object-contain"
-          />
-        </div>
+        <Image
+          src="/whats-new.png"
+          alt="whats new"
+          fill
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 };

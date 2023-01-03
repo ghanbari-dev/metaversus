@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import Title from "./Title";
 
 type Props = {};
 
@@ -16,10 +17,11 @@ const Worlds = (props: Props) => {
   const [selected, setSelected] = useState<number>(1);
   return (
     <div className="mt-52 flex flex-col items-center text-gray-400">
-      <div className="head-sub">The World</div>
-      <h2 className="mt-2 text-white text-[64px] leading-[81px] font-bold text-center tracking-tight">
-        Choose the world you want to explore
-      </h2>
+      <Title
+        subhead="The World"
+        title="Choose the world you want to explore"
+        sx="text-center"
+      />
       <div className="mt-[50px] w-full h-[563px] flex gap-7">
         {data.map((item, index) => (
           <div

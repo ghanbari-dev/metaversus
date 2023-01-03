@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../components/About";
+import Explore from "../components/Explore";
 import GetStarted from "../components/GetStarted";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -22,6 +23,8 @@ const page = (props: Props) => {
       <GetStarted />
 
       <WhatsNew />
+
+      <Explore />
     </div>
   );
 };

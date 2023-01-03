@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import IconWrapper from "./IconWrapper";
+import Title from "./Title";
 
 type Props = {};
 
@@ -23,10 +24,10 @@ const GetStarted = (props: Props) => {
           />
         </div>
         <div className="flex-[3]">
-          <div className="head-sub">How Metaverus Works</div>
-          <h2 className="mt-2 text-[64px] font-bold leading-[77px] text-white">
-            Get started with just a few clicks
-          </h2>
+          <Title
+            subhead="How Metaverus Works"
+            title="Get started with just a few clicks"
+          />
           {data.map((d, index) => (
             <div key={index} className="mt-6 flex gap-7">
               <IconWrapper>
