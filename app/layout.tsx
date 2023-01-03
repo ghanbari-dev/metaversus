@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="bg-black w-5/6 mx-auto overflow-x-hidden">{children}</body>
+      <body className="bg-[#1A232E] w-5/6 mx-auto overflow-x-hidden">{children}</body>
     </html>
   );
 }

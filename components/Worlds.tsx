@@ -20,9 +20,10 @@ const Worlds = (props: Props) => {
       <h2 className="mt-2 text-white text-[64px] leading-[81px] font-bold text-center tracking-tight">
         Choose the world you want to explore
       </h2>
-      <div className="mt-[50] w-full h-[563px] flex gap-7">
+      <div className="mt-[50px] w-full h-[563px] flex gap-7">
         {data.map((item, index) => (
           <div
+            key={index}
             className={
               "relative h-full w-full rounded-3xl overflow-hidden flex items-end justify-center" +
               (index == selected ? " flex-[3]" : " flex-[1]")
@@ -37,10 +38,7 @@ const Worlds = (props: Props) => {
             />
             {index == selected ? (
               <div className="z-20 w-full flex flex-col items-start pl-8">
-                <div
-                  className="p-5 rounded-full relative overflow-hidden"
-                  style={{ backdropFilter: "blur(24px)" }}
-                >
+                <div className="p-5 rounded-full relative overflow-hidden backdrop-blur-xl">
                   <Image
                     src="/headset.svg"
                     alt="headset"
