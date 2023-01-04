@@ -2,6 +2,8 @@ import React from "react";
 import {
   About,
   Explore,
+  Footer,
+  Founder,
   GetStarted,
   Header,
   Hero,
@@ -30,6 +32,10 @@ const page = (props: Props) => {
       <Explore />
 
       <Insight />
+
+      <Founder />
+
+      <Footer />
     </div>
   );
 };
