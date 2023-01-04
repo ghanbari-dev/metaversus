@@ -1,4 +1,6 @@
 import React from "react";
+import LightEffect from "../components/items/LightEffect";
+import SectionWrapper from "../components/items/SectionWrapper";
 import {
   About,
   Explore,
@@ -17,23 +19,41 @@ type Props = {};
 const page = (props: Props) => {
   return (
     <div>
-      <Header />
+      <SectionWrapper count={3} align="right" index={7}>
+        <Header />
+      </SectionWrapper>
 
-      <Hero />
+      <SectionWrapper count={5} align="left" index={1}>
+        <Hero />
+      </SectionWrapper>
 
-      <About />
+      <SectionWrapper count={5} align="right" index={2}>
+        <About />
+      </SectionWrapper>
 
-      <Worlds />
+      <SectionWrapper count={5} align="left" index={3}>
+        <Worlds />
+      </SectionWrapper>
 
-      <GetStarted />
+      <SectionWrapper count={5} align="right" index={4}>
+        <GetStarted />
+      </SectionWrapper>
 
-      <WhatsNew />
+      <SectionWrapper count={5} align="left" index={5}>
+        <WhatsNew />
+      </SectionWrapper>
 
-      <Explore />
+      <SectionWrapper count={5} align="right" index={6}>
+        <Explore />
+      </SectionWrapper>
 
-      <Insight />
+      <SectionWrapper count={5} align="left" index={7}>
+        <Insight />
+      </SectionWrapper>
 
-      <Founder />
+      <SectionWrapper count={5} align="right" index={1}>
+        <Founder />
+      </SectionWrapper>
 
       <Footer />
     </div>
