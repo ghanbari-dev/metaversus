@@ -17,7 +17,7 @@ const LightEffect = ({ type, sx }: Props) => {
     "bg-[#9542E859]",
   ];
   return (
-    <div className={"absolute w-96 h-96 " + sx}>
+    <div className={"absolute w-96 h-96 -z-50 " + sx}>
       <div className={"blur-3xl w-full h-full opacity-30 " + colors[type]} />
     </div>
   );

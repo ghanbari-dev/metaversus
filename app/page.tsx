@@ -19,39 +19,39 @@ type Props = {};
 const page = (props: Props) => {
   return (
     <div>
-      <SectionWrapper count={3} align="right" index={7}>
+      <SectionWrapper align="right" index={7}>
         <Header />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="left" index={1}>
+      <SectionWrapper align="left" index={1}>
         <Hero />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="right" index={2}>
+      <SectionWrapper align="right" index={2}>
         <About />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="left" index={3}>
+      <SectionWrapper align="left" index={3}>
         <Worlds />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="right" index={4}>
+      <SectionWrapper align="right" index={4}>
         <GetStarted />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="left" index={5}>
+      <SectionWrapper align="left" index={5}>
         <WhatsNew />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="right" index={6}>
+      <SectionWrapper align="right" index={6}>
         <Explore />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="left" index={7}>
+      <SectionWrapper align="left" index={7}>
         <Insight />
       </SectionWrapper>
 
-      <SectionWrapper count={5} align="right" index={1}>
+      <SectionWrapper align="right" index={1}>
         <Founder />
       </SectionWrapper>
 
