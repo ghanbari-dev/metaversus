@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Title from "../items/Title";
 import WorldsCard from "../items/WorldsCard";
+import { motion } from "framer-motion";
+import { staggerContainer } from "../../utils/motions";
 
 const Worlds = () => {
   const data = [
@@ -14,7 +16,11 @@ const Worlds = () => {
   ];
   const [selected, setSelected] = useState<number>(1);
   return (
-    <div className="mt-52 flex flex-col items-center text-gray-400">
+    <motion.div
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }} className="mt-52 flex flex-col items-center text-gray-400">
       <Title
         subhead="The World"
         title="Choose the world you want to explore"
@@ -31,7 +37,7 @@ const Worlds = () => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

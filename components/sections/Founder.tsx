@@ -1,12 +1,21 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, zoomIn } from "../../utils/motions";
 
-type Props = {};
-
-const Founder = (props: Props) => {
+const Founder = () => {
   return (
-    <div className="mt-[200px] h-[610px] flex gap-8">
-      <div
+    <motion.div
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="mt-[200px] h-[610px] flex gap-8"
+    >
+      <motion.div
+        variants={fadeIn("right", "tween", 0.2, 1)}
         className="flex-[1] rounded-[32px] border border-gray-500 flex flex-col justify-end p-7 text-white tracking-tight"
         style={{
           background:
@@ -20,23 +29,28 @@ const Founder = (props: Props) => {
           for today's work, or can be called web 3.0. by using metaverse you can
           use it as anything”
         </p>
-      </div>
-      <div className="flex-[2] relative ">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", "tween", 0.2, 1)}
+        className="flex-[2] relative "
+      >
         <Image
           src="/planet-09.png"
           alt="planet-09"
           fill
           className="object-cover rounded-[40px]"
         />
-        <Image
-          src="/stamp.png"
-          alt="stamp"
-          width={155}
-          height={155}
-          className="absolute top-12 -translate-x-1/2 object-contain z-10"
-        />
-      </div>
-    </div>
+        <motion.div variants={zoomIn(0.4, 1)}>
+          <Image
+            src="/stamp.png"
+            alt="stamp"
+            width={155}
+            height={155}
+            className="absolute top-12 -translate-x-1/2 object-contain z-10"
+          />
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

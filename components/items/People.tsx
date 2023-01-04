@@ -1,5 +1,5 @@
+import React from "react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 
 type Props = {
   src: string;

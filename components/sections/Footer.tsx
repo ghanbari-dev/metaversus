@@ -1,11 +1,19 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { footerVariants } from "../../utils/motions";
 
-type Props = {};
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
-    <div className="mt-[200px]">
+    <motion.footer
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="show"
+      className="mt-[200px]"
+    >
       <div className="flex justify-between items-center">
         <h2 className="font-bold text-[64px] leading-[80px] tracking-tight text-white">
           Enter the Metaverse
@@ -32,7 +40,7 @@ const Footer = (props: Props) => {
           <Image src="/facebook.svg" alt="facebook" width={24} height={24} />
         </div>
       </div>
-    </div>
+    </motion.footer>
   );
 };
 

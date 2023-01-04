@@ -1,5 +1,9 @@
-import Image from "next/image";
+"use client"
+
 import React, { Dispatch, SetStateAction } from "react";
+import Image from "next/image";
+import { fadeIn } from "../../utils/motions";
+import { motion } from "framer-motion";
 
 type Props = {
   index: number;
@@ -19,7 +23,8 @@ const WorldsCard = ({
   title,
 }: Props) => {
   return (
-    <div
+    <motion.div
+    variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className={
         "relative h-full w-full rounded-3xl overflow-hidden flex items-end justify-center" +
         (index == selected ? " flex-[3]" : " flex-[1]")
@@ -47,7 +52,7 @@ const WorldsCard = ({
           {title}
         </h3>
       )}
-    </div>
+    </motion.div>
   );
 };
 

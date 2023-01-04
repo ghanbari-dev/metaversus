@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import InsightCard from "../items/InsightCard";
 import Title from "../items/Title";
+import { motion } from "framer-motion";
+import { staggerContainer } from "../../utils/motions";
 
 const Insight = () => {
   const data = [
@@ -28,7 +32,13 @@ const Insight = () => {
   ];
 
   return (
-    <div className="mt-[200px] flex flex-col items-center">
+    <motion.div
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="mt-[200px] flex flex-col items-center"
+    >
       <Title
         subhead="Insight"
         title="Insight about metaverse"
@@ -36,10 +46,10 @@ const Insight = () => {
       />
       <div className="mt-12 flex flex-col w-full gap-7">
         {data.map((item, index) => (
-          <InsightCard key={index} {...item} />
+          <InsightCard key={index} index={index} {...item} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
