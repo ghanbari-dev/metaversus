@@ -15,14 +15,14 @@ const Hero = () => {
       viewport={{ once: false, amount: 0.25 }}
       className="mt-44"
     >
-      <div className="text-white text-[144px] leading-[110%] font-bold tracking-tight uppercase flex items-center flex-col">
+      <div className="text-white text-[50px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[144px] leading-[110%] font-bold tracking-tight uppercase flex items-center flex-col">
         <motion.h1 variants={textVariant(1.1)}>METAVERSUS</motion.h1>
         <motion.div
           variants={textVariant(1.2)}
-          className="flex items-center w-[908.22px] z-20"
+          className="flex items-center w-[315.36px] sm:w-[504.56px] md:w-[630.7px] lg:w-[756.84px] xl:w-[908.22px] z-20"
         >
           <h1>ma</h1>
-          <div className="flex-grow h-[108px] border-[18px] rounded-r-[50px] border-white mx-2" />
+          <div className="flex-grow h-[30px] sm:h-[55px] md:h-[70px] lg:h-[85px] xl:h-[108px] border-[10px] sm:border-[13px] md:border-[16px] lg:border-[19px]  xl:border-[22px] rounded-r-[50px] border-white mx-2" />
           <h1>ness</h1>
         </motion.div>
       </div>

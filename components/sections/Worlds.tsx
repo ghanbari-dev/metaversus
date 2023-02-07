@@ -26,7 +26,7 @@ const Worlds = () => {
         title="Choose the world you want to explore"
         sx="text-center"
       />
-      <div className="mt-[50px] w-full h-[563px] flex gap-7">
+      <div className="mt-[50px] w-full h-[563px] flex flex-col md:flex-row gap-7">
         {data.map((item, index) => (
           <WorldsCard
             key={index}

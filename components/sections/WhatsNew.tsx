@@ -29,18 +29,18 @@ const WhatsNew = () => {
     variants={staggerContainer()}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: false, amount: 0.25 }} className="mt-[200px] flex">
+    viewport={{ once: false, amount: 0.25 }} className="mt-[200px] flex flex-col md:flex-row">
       <motion.div
         variants={fadeIn('right', 'tween', 0.2, 1)} className="flex-[4]">
         <Title subhead="Whats New?" title="What's new about Metaversus?" />
-        <div className="mt-12 flex gap-12">
+        <div className="mt-12 flex flex-col sm:flex-row gap-12">
           {data.map((item, index) => (
             <WhatsNewCard key={index} {...item} />
           ))}
         </div>
       </motion.div>
       <motion.div
-        variants={planetVariants('right')} className="relative flex-[3]">
+        variants={planetVariants('right')} className="relative flex-[3] min-h-[250px] mt-6 md:mt-0 block">
         <Image
           src="/whats-new.png"
           alt="whats new"

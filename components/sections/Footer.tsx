@@ -14,8 +14,8 @@ const Footer = () => {
       whileInView="show"
       className="mt-[200px]"
     >
-      <div className="flex justify-between items-center">
-        <h2 className="font-bold text-[64px] leading-[80px] tracking-tight text-white">
+      <div className="flex flex-col gap-6 md:flex-row md:gap-0 justify-center md:justify-between items-center">
+        <h2 className="font-bold tracking-tight text-white text-center text-[32px] sm:text-[44px] lg:text-[64px] lg:leading-[80px]">
           Enter the Metaverse
         </h2>
         <div className="bg-[#25618B] flex items-center px-5 py-8 rounded-full flex-shrink-0">
@@ -26,11 +26,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-white mt-20 h-[2px] opacity-10" />
-      <div className="my-[50px] flex items-center justify-between">
+      <div className="my-[50px] flex flex-col items-center justify-center gap-6 md:gap-0 md:flex-row md:justify-between">
         <div className="text-white font-extrabold text-2xl leading-[30px]">
           METAVERUS
         </div>
-        <p className="text-white opacity-80 text-sm tracking-wide">
+        <p className="text-white opacity-80 text-sm tracking-wide text-center">
           Copyright © 2021 - 2022 Metaversus. All rights reserved.
         </p>
         <div className="flex items-center gap-7">

@@ -14,11 +14,10 @@ import {
   Worlds,
 } from "../components/sections";
 
-type Props = {};
 
-const page = (props: Props) => {
+const page = () => {
   return (
-    <div>
+    <div className="w-5/6 mx-auto">
       <SectionWrapper align="right" index={7}>
         <Header />
       </SectionWrapper>

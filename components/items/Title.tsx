@@ -21,7 +21,7 @@ const Title = ({ subhead, title, sx }: Props) => {
         initial="hidden"
         whileInView="show"
         className={
-          "mt-2 text-[64px] font-bold leading-[80px] text-white tracking-tight" +
+          "mt-2 text-2xl leading-[60px] md:text-[44px] md:leading-[60px] lg:text-[64px] lg:leading-[80px] font-bold text-white tracking-tight" +
           (sx ? ` ${sx}` : "")
         }
       >

@@ -12,7 +12,7 @@ const Founder = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="mt-[200px] h-[610px] flex gap-8"
+      className="mt-[200px] h-[610px] flex flex-col gap-8 md:flex-row"
     >
       <motion.div
         variants={fadeIn("right", "tween", 0.2, 1)}
@@ -24,7 +24,7 @@ const Founder = () => {
       >
         <p className="text-[32px] leading-[40px] font-bold">Samantha</p>
         <p className="mt-2 text-lg leading-[22px]">Founder Metaverus</p>
-        <p className="mt-6 text-2xl leading-[46px]">
+        <p className="mt-6 text-lg leading-[30px] md:text-xl md:leading-[40px] lg:text-2xl lg:leading-[46px]">
           “With the development of today's technology, metaverse is very useful
           for today's work, or can be called web 3.0. by using metaverse you can
           use it as anything”
@@ -32,7 +32,7 @@ const Founder = () => {
       </motion.div>
       <motion.div
         variants={fadeIn("left", "tween", 0.2, 1)}
-        className="flex-[2] relative "
+        className="flex-[2] relative inline-block min-h-[200px]"
       >
         <Image
           src="/planet-09.png"
@@ -46,7 +46,7 @@ const Founder = () => {
             alt="stamp"
             width={155}
             height={155}
-            className="absolute top-12 -translate-x-1/2 object-contain z-10"
+            className="absolute -right-4 -top-16 md:top-12 md:left-0 md:-translate-x-1/2 object-contain z-10"
           />
         </motion.div>
       </motion.div>

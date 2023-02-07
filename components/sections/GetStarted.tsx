@@ -20,11 +20,11 @@ const GetStarted = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="mt-[200px] flex"
+      className="mt-[200px] flex flex-col md:flex-row"
     >
       <motion.div
         variants={planetVariants("left")}
-        className="relative flex-[4]"
+        className="relative flex-[4] min-h-[300px] block md:inline-flex md:h-auto"
       >
         <Image
           src="/get-started.png"
@@ -33,6 +33,8 @@ const GetStarted = () => {
           className="object-contain"
         />
       </motion.div>
+      
+
       <motion.div
         variants={fadeIn("left", "tween", 0.2, 1)}
         className="flex-[3]"
