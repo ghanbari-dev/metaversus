@@ -26,7 +26,7 @@ const WorldsCard = ({
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={
-        "relative h-full w-full rounded-3xl overflow-hidden flex items-end justify-center" +
+        "relative h-full w-full rounded-3xl overflow-hidden flex items-end justify-center cursor-pointer" +
         (index == selected ? " flex-[3]" : " flex-[1]")
       }
       onClick={() => setSelected(index)}
